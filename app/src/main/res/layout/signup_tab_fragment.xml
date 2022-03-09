@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    <EditText-->
+    <!--        android:inputType="textEmailAddress"-->
+    <!--        android:background="@drawable/edit_text_bg"-->
+    <!--        android:layout_marginTop="40dp"-->
+    <!--        android:id="@+id/et_email"-->
+    <!--        android:layout_width="329dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="Email"-->
+    <!--        android:paddingLeft="20dp"-->
+    <!--        android:paddingTop="10dp"-->
+    <!--        android:paddingBottom="10dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintWidth_percent=".8" />-->
+
+    <!--    <EditText-->
+    <!--        android:inputType="number"-->
+    <!--        android:maxLength="@integer/material_motion_duration_long_1"-->
+    <!--        android:background="@drawable/edit_text_bg"-->
+    <!--        android:id="@+id/et_mobileno"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:hint="Mobile No"-->
+    <!--        android:paddingLeft="20dp"-->
+    <!--        android:paddingTop="10dp"-->
+    <!--        android:paddingBottom="10dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias=".5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/et_email"-->
+    <!--        app:layout_constraintVertical_bias="0"-->
+    <!--        app:layout_constraintWidth_percent=".8" />-->
+
+    <!--    <EditText-->
+    <!--        android:inputType="textPassword"-->
+    <!--        android:background="@drawable/edit_text_bg"-->
+    <!--        android:id="@+id/et_password"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:hint="Password"-->
+    <!--        android:paddingLeft="20dp"-->
+    <!--        android:paddingTop="10dp"-->
+    <!--        android:paddingBottom="10dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias=".5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/et_mobileno"-->
+    <!--        app:layout_constraintVertical_bias="0"-->
+    <!--        app:layout_constraintWidth_percent=".8" />-->
+
+    <!--    <EditText-->
+    <!--        android:inputType="textPassword"-->
+    <!--        android:background="@drawable/edit_text_bg"-->
+    <!--        android:id="@+id/et_conpassword"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:hint="Conferm Password"-->
+    <!--        android:paddingLeft="20dp"-->
+    <!--        android:paddingTop="10dp"-->
+    <!--        android:paddingBottom="10dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias=".5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/et_password"-->
+    <!--        app:layout_constraintVertical_bias="0"-->
+    <!--        app:layout_constraintWidth_percent=".8" />-->
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView_login"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="76dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/signup" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:text="SignUP"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825"
+        app:layout_constraintWidth_percent=".8" />
+    <!--    app:layout_constraintTop_toBottomOf="@+id/et_conpassword"-->
+</androidx.constraintlayout.widget.ConstraintLayout>

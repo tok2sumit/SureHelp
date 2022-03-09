@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SureHelp</string>
+    <string name="create">create</string>
+    <string name="account">Account</string>
+    <string name="enter_full_name">Enter Full Name</string>
+    <string name="enter_username">enter_username</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="next_btn">Next</string>
+    <string name="login">login</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="code">Co\nde</string>
+    <string name="verification">verification</string>
+    <string name="otp_verification_text">Enter One Time Password send on +91252525252</string>
+    <string name="verify_code">verify code</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="new_credentials">New \nCredentials</string>
+    <string name="password_updated">Password \nUpdated</string>
+
+
+    <!--to toggle the open close button
+        of the navigation drawer-->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+</resources>

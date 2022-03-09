@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tok2sumit.surehelp">
+    <!-- Adding the permission to vibrate when alarm starts -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Adding the permission to set the alarm -->
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SureHelp">
+        <activity
+            android:name=".New_dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".success_message_activity"
+            android:exported="false" />
+        <activity
+            android:name=".set_new_password_activity"
+            android:exported="false" />
+        <activity
+            android:name=".forgot_password_activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_otp"
+            android:exported="false" />
+        <activity
+            android:name=".signup_tab_activity3"
+            android:exported="false" />
+        <activity
+            android:name=".signup_tab_acitvity2"
+            android:exported="false" />
+        <activity
+            android:name=".signup_tab_activity1"
+            android:exported="false" />
+        <activity
+            android:name=".Med_Remainder_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".HomescreenActivity"
+            android:exported="false" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Onboard"
+            android:exported="false" />
+        <activity android:name=".NotificationMessage" />
+        <activity android:name=".CreateEvent" />
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".BootUpReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".AlarmBrodcast" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

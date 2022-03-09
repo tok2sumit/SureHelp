@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "916266560132",
+    "project_id": "surehelp-581ef",
+    "storage_bucket": "surehelp-581ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916266560132:android:195fc766df58a91d5df0d1",
+        "android_client_info": {
+          "package_name": "com.tok2sumit.surehelp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "916266560132-onnqrh12p8uuud492jj8o5i9f8aq1lat.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tok2sumit.surehelp",
+            "certificate_hash": "a9c345e0bf0625302da6247480eabfda5b8dcbb5"
+          }
+        },
+        {
+          "client_id": "916266560132-236t87665r1ro5ba0r0clia8agljdmdg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtqXTWYPQ1LVZjq7Oc2r3YGlQSXeYnXeo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "916266560132-236t87665r1ro5ba0r0clia8agljdmdg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

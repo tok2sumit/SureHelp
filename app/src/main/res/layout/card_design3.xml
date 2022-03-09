@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="8dp"
+    android:layout_margin="12dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card2"
+        android:padding="15dp">
+        <TextView
+            android:id="@+id/card3_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:text="Locationn"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_below="@+id/card3_title"
+            android:id="@+id/card3_desc"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="aldfjasdfjasdfsafasfh sdihsfg ais a asifhas fgag asigha sfdjh fasd  sjdfh  jhas " />
+
+        <ImageView
+            android:id="@+id/card3_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/pill"
+            android:scaleType="fitCenter"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
