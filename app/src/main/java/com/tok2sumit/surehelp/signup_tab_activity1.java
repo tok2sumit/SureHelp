@@ -141,10 +141,10 @@ public class signup_tab_activity1 extends AppCompatActivity {
         String password1 = password.getText().toString();
 
         Intent intent = new Intent(getApplicationContext(), signup_tab_acitvity2.class);
-        intent.putExtra("fullname","fullname1");
-        intent.putExtra("username","username1");
-        intent.putExtra("email","email1");
-        intent.putExtra("password","password1");
+        intent.putExtra("fullname",fullname1);
+        intent.putExtra("username",username1);
+        intent.putExtra("email",email1);
+        intent.putExtra("password",password1);
 
 
 

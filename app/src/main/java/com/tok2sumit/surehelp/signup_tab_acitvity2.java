@@ -75,12 +75,12 @@ public class signup_tab_acitvity2 extends AppCompatActivity {
 
         Intent intent = new Intent(getApplicationContext(), signup_tab_activity3.class);
 
-        intent.putExtra("fullname","fullname2");
-        intent.putExtra("username","username2");
-        intent.putExtra("email","email2");
-        intent.putExtra("password","password2");
-        intent.putExtra("dob","_date");
-        intent.putExtra("gender","_gender");
+        intent.putExtra("fullname",fullname2);
+        intent.putExtra("username",username2);
+        intent.putExtra("email",email2);
+        intent.putExtra("password",password2);
+        intent.putExtra("dob",_date);
+        intent.putExtra("gender",_gender);
 
         //Add Transition and call next activity
         Pair[] pairs = new Pair[6];

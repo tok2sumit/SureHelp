@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SureHelp">
         <activity
+            android:name=".Login_tab_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Government_facility"
+            android:exported="false" />
+        <activity
             android:name=".New_dashboard"
             android:exported="false" />
         <activity

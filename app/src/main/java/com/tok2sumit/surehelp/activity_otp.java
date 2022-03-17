@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
@@ -21,6 +22,7 @@ import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.tok2sumit.surehelp.HelperClasses.UserHelperClass;
 
 import java.util.concurrent.TimeUnit;
 
@@ -41,6 +43,18 @@ public class activity_otp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_otp);
+
+
+        btn_callNextScreenFromOTP = findViewById(R.id.btn_callNextScreenFromOTP);
+        btn_callNextScreenFromOTP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                storeNewUser();
+            }
+        });
+
+
 
         pinfromUser = findViewById(R.id.pin_view);
         otpDescriptionText = findViewById(R.id.otp_description_text);
@@ -125,10 +139,10 @@ public class activity_otp extends AppCompatActivity {
     private void storeNewUser() {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference reference = database.getReference("Users");
-//
-        reference.setValue(fullname);
-//        UserHelperClass addNewUser = new UserHelperClass(fullname,username,email,phoneno,password,date,gender);
-//        reference.child(phoneno).setValue(addNewUser);
+//        reference.setValue("hello all");
+        UserHelperClass addNewUser = new UserHelperClass(fullname,phoneno,email,username,password,date,gender);
+//        reference.setValue(addNewUser);
+        reference.child(phoneno).setValue(addNewUser);
 //        Here using .child(phoneno) to store data under Users(reference) and storing it having id as phoneno.
 
     }

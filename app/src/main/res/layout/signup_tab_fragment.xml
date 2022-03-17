@@ -106,7 +106,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825"
+        app:layout_constraintVertical_bias="0.816"
         app:layout_constraintWidth_percent=".8" />
-    <!--    app:layout_constraintTop_toBottomOf="@+id/et_conpassword"-->
 </androidx.constraintlayout.widget.ConstraintLayout>
