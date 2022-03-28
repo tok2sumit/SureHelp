@@ -38,8 +38,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
 //        for making navigation drawer item clikable
         navigationView.setNavigationItemSelectedListener(this);
-
-
     }
     @Override
     public void onBackPressed(){

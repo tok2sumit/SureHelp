@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Government_facility extends AppCompatActivity {
+public class Yoga_Workout extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_government_facility);
+        setContentView(R.layout.activity_yoga_workout);
     }
 }

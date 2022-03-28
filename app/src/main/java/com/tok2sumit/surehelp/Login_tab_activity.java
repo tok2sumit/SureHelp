@@ -93,12 +93,14 @@ public class Login_tab_activity extends AppCompatActivity {
                         progressbar.setVisibility(View.GONE);
 //                    if the user exist with that phoneno
 //                    fetch all data of the user
-                        String _fullname = snapshot.child(_completePhoneNumber).child("fullname").getValue(String.class);
-                        String _email = snapshot.child(_completePhoneNumber).child("email").getValue(String.class);
-                        String _phoneno = snapshot.child(_completePhoneNumber).child("phoneno").getValue(String.class);
-                        String _dateofBirth = snapshot.child(_completePhoneNumber).child("date").getValue(String.class);
-
-                        Toast.makeText(Login_tab_activity.this, _fullname+_email+_phoneno+_dateofBirth,Toast.LENGTH_SHORT).show();
+//                        String _fullname = snapshot.child(_completePhoneNumber).child("fullname").getValue(String.class);
+//                        String _email = snapshot.child(_completePhoneNumber).child("email").getValue(String.class);
+//                        String _phoneno = snapshot.child(_completePhoneNumber).child("phoneno").getValue(String.class);
+//                        String _dateofBirth = snapshot.child(_completePhoneNumber).child("date").getValue(String.class);
+//
+//                        Toast.makeText(Login_tab_activity.this, _fullname+_email+_phoneno+_dateofBirth,Toast.LENGTH_SHORT).show();
+                       Intent intent = new Intent(getApplicationContext(),New_dashboard.class);
+                       startActivity(intent);
                     } else {
                         progressbar.setVisibility(View.GONE);
                         Toast.makeText(Login_tab_activity.this, "Password does not match!", Toast.LENGTH_SHORT).show();

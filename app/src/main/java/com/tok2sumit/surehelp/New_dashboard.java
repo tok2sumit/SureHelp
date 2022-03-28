@@ -44,11 +44,6 @@ public class New_dashboard extends AppCompatActivity {
         featured_recycler3 = findViewById(R.id.featured_recycler3);
         featuredRecycler();
 
-
-
-
-
-
     }
 
     private void featuredRecycler(){

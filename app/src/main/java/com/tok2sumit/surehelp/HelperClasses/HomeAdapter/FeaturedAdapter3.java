@@ -43,8 +43,6 @@ public class FeaturedAdapter3 extends RecyclerView.Adapter<FeaturedAdapter3.Feat
         return FeaturedLocations.size();
     }
 
-
-
     //    It will hold the view
     public static class FeaturedviewHolder extends RecyclerView.ViewHolder{
         ImageView image;
@@ -57,7 +55,6 @@ public class FeaturedAdapter3 extends RecyclerView.Adapter<FeaturedAdapter3.Feat
             image = itemView.findViewById(R.id.card3_image);
             title = itemView.findViewById(R.id.card3_title);
             desc = itemView.findViewById(R.id.card3_desc);
-
         }
     }
 }
