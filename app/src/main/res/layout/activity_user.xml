@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/login_btn"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_marginTop="45dp"
+    android:background="@drawable/top_round"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/a"
+        />
+
+    <TextView
+        android:id="@+id/name_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="aaa"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/lastmsg_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/name_profile"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/phone_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/lastmsg_profile"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/country_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@id/phone_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:text=""
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/timer"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/country_profile"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_bg_round"
+        android:padding="15dp"
+        android:text="01:00"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/startbutton"
+        android:padding="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_bg"
+        android:text="START"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
+</RelativeLayout>

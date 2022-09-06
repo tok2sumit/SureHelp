@@ -96,7 +96,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/et_password"
             android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"
             android:background="@drawable/button_bg"
             android:onClick="letTheUserLoggedIn"

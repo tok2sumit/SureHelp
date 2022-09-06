@@ -27,11 +27,11 @@ import com.tok2sumit.surehelp.HelperClasses.UserHelperClass;
 
 import java.util.concurrent.TimeUnit;
 
-public class activity_otp extends AppCompatActivity {
+public class forgot_otp extends AppCompatActivity {
 
     Button btn_callNextScreenFromOTP;
 
-//    pinview variable
+    //    pinview variable
     PinView pinfromUser;
     TextView otpDescriptionText;
     public String fullname,phoneno,email,username,password,date,gender,whattodo;
@@ -44,6 +44,10 @@ public class activity_otp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_otp);
+
+
+
+
 
 
         pinfromUser = findViewById(R.id.pin_view);
@@ -60,13 +64,13 @@ public class activity_otp extends AppCompatActivity {
         gender = getIntent().getStringExtra("gender");
         date = getIntent().getStringExtra("dob");
         phoneno = getIntent().getStringExtra("phoneno");
-//        whattodo = getIntent().getStringExtra("whattodo");
+        whattodo = getIntent().getStringExtra("whattodo");
 
         btn_callNextScreenFromOTP = findViewById(R.id.btn_callNextScreenFromOTP);
         btn_callNextScreenFromOTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    storeNewUser();
+                    updateOldUserData();
             }
         });
 
@@ -107,15 +111,15 @@ public class activity_otp extends AppCompatActivity {
 
                 @Override
                 public void onVerificationFailed(@NonNull FirebaseException e) {
-                    Toast.makeText(activity_otp.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(forgot_otp.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             };
-//  Verify Code
+    //  Verify Code
     private void verifyCode(String code) {
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(codeBySystem,code);
         signInWithPhoneAuthCredential(credential);
     }
-//  Sign in the User.
+    //  Sign in the User.
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
@@ -125,30 +129,19 @@ public class activity_otp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 //                            Toast.makeText(activity_otp.this,"Verification Completed.!",Toast.LENGTH_SHORT);
-
-                                storeNewUser();
-                                Intent intent = new Intent(getApplicationContext(),Login_tab_activity.class);
-                                startActivity(intent);
-                                finish();
-
+                                updateOldUserData();
                         } else {
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
-                                Toast.makeText(activity_otp.this,"Verification Not Completed! Try again.",Toast.LENGTH_SHORT);
+                                Toast.makeText(forgot_otp.this,"Verification Not Completed! Try again.",Toast.LENGTH_SHORT);
                             }
                         }
                     }
                 });
     }
 
-    private void storeNewUser() {
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference reference = database.getReference("Users");
-//        reference.setValue("hello all");
-        UserHelperClass addNewUser = new UserHelperClass(fullname,phoneno,email,username,password,date,gender);
-//        reference.setValue(addNewUser);
-        reference.child(phoneno).setValue(addNewUser);
-//        Here using .child(phoneno) to store data under Users(reference) and storing it having id as phoneno.
-        Intent intent = new Intent(getApplicationContext(),Login_Activity.class);
+    private void updateOldUserData() {
+        Intent intent = new Intent(forgot_otp.this,set_new_password_activity.class);
+        intent.putExtra("phoneno",phoneno);
         startActivity(intent);
         finish();
     }

@@ -8,6 +8,10 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+    buildFeatures{
+        viewBinding true
+    }
+
     defaultConfig {
         applicationId "com.tok2sumit.surehelp"
         minSdkVersion 21
@@ -88,4 +92,7 @@ dependencies {
 //    Yoga & Workout dependencies
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
+//    for sending location
+    implementation "com.google.android.gms:play-services-location:15.0.1"
 }
