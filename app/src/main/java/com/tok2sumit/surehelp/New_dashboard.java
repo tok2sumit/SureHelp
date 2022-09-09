@@ -48,12 +48,14 @@ public class New_dashboard extends AppCompatActivity {
     ImageView yoga_workout;
     RecyclerView featured_recycler, featured_recycler2, featured_recycler3;
     RecyclerView.Adapter adapter, adapter2, adapter3;
+    ImageView nearby_location;
 
     //    For Sending location
     ImageView btnGetLocation;
     FusedLocationProviderClient fusedLocationProviderClient;
     String enumber1;
     String locationlink;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,8 @@ public class New_dashboard extends AppCompatActivity {
 //        Hooks
         yoga_workout = findViewById(R.id.img_yoga_workout);
         pill = findViewById(R.id.img_pill);
+        nearby_location = findViewById(R.id.nearby_location);
+
         pill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,6 +83,15 @@ public class New_dashboard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        nearby_location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nearby_l = new Intent(getApplicationContext(),Nearby_Location.class);
+                startActivity(nearby_l);
+            }
+        });
+
 
         featured_recycler = findViewById(R.id.featured_recycler);
         featured_recycler2 = findViewById(R.id.featured_recycler2);

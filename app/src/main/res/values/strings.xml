@@ -24,4 +24,6 @@
         of the navigation drawer-->
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
+    <string name="title_activity_nearby_location">Nearby_Location</string>
+    <string name="google_maps_api">AIzaSyAB69_Gt9b2bcGiUeuS-zNzBWCOHM7wMT8</string>
 </resources>

@@ -203,6 +203,7 @@
                         android:elevation="8dp">
 
                         <ImageView
+                            android:id="@+id/nearby_location"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_centerInParent="true"

@@ -4,11 +4,9 @@
     <!-- Adding the permission to vibrate when alarm starts -->
     <uses-permission android:name="android.permission.VIBRATE" /> <!-- Adding the permission to set the alarm -->
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
-<!--    permission for sending sms-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- permission for sending sms -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -17,9 +15,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SureHelp">
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAB69_Gt9b2bcGiUeuS-zNzBWCOHM7wMT8
+" />
+
         <activity
             android:name=".forgot_otp"
             android:exported="false" />
+
+        <activity
+            android:name=".Nearby_Location"
+            android:exported="false" />
+
         <activity
             android:name=".Yoga_Workout"
             android:exported="false" />
