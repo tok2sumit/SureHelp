@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tok2sumit.surehelp">
+
     <!-- Adding the permission to vibrate when alarm starts -->
     <uses-permission android:name="android.permission.VIBRATE" /> <!-- Adding the permission to set the alarm -->
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- permission for sending sms -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+
+
+
+    <uses-permission android:name="com.androidtutorialpoint.mymapsappsdirection.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+
 
     <application
         android:allowBackup="true"
@@ -15,6 +27,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SureHelp">
+
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -28,17 +41,15 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAB69_Gt9b2bcGiUeuS-zNzBWCOHM7wMT8
-" />
+            android:value="AIzaSyAB69_Gt9b2bcGiUeuS-zNzBWCOHM7wMT8" />
 
+        <activity
+            android:name=".Map_Activity"
+            android:exported="false"
+            android:label="@string/title_activity_map" />
         <activity
             android:name=".forgot_otp"
             android:exported="false" />
-
-        <activity
-            android:name=".Nearby_Location"
-            android:exported="false" />
-
         <activity
             android:name=".Yoga_Workout"
             android:exported="false" />

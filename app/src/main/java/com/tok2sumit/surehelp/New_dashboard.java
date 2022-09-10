@@ -1,7 +1,5 @@
 package com.tok2sumit.surehelp;
 
-import static androidx.constraintlayout.motion.widget.Debug.getLocation;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -12,16 +10,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.GradientDrawable;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
-import android.media.Image;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -87,7 +82,7 @@ public class New_dashboard extends AppCompatActivity {
         nearby_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nearby_l = new Intent(getApplicationContext(),Nearby_Location.class);
+                Intent nearby_l = new Intent(getApplicationContext(),Map_Activity.class);
                 startActivity(nearby_l);
             }
         });
