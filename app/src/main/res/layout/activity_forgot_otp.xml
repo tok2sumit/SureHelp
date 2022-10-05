@@ -13,9 +13,9 @@
         android:padding="30dp">
 
         <ImageView
+            android:id="@+id/img_forgort_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="goToHomeFromOTP"
             android:padding="5dp"
             android:src="@drawable/ic_close"
             app:tint="@color/black" />

@@ -28,7 +28,7 @@
         android:layout_marginBottom="90dp"
         android:background="@drawable/button_bg"
         android:onClick="letTheUserLoggedIn"
-        android:text="Proceed"
+        android:text="SignIn"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"

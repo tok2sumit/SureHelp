@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".Login_Activity"
     android:fitsSystemWindows="true"
-    android:background="@color/white"
+    android:background="@color/colorPrimary"
     android:id="@+id/drawer_layout"
     tools:openDrawer="start">
 
@@ -20,205 +20,375 @@
         app:menu="@menu/main_menu" />
 
 
-<!--    <ScrollView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
+
+<ScrollView
+    android:background="@drawable/top_round"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:scaleType="centerCrop"-->
-<!--        android:src="@drawable/img"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHeight_percent=".25"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.0" />-->
-
-<!--    <ImageView-->
-<!--        app:layout_constraintHorizontal_bias="1"-->
-<!--        app:layout_constraintVertical_bias="1"-->
-<!--        android:id="@+id/imageView3"-->
-<!--        android:layout_width="40dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:src="@drawable/profile"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/imageView4"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        android:layout_marginRight="18dp"/>-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView4"-->
-<!--        android:layout_width="40dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:src="@drawable/notification"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/imageView3"-->
-<!--        app:layout_constraintHorizontal_bias="0.947"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.132" />-->
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="60dp"-->
-<!--        android:padding="5dp"-->
-<!--        android:text="Hello User"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="28sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/imageView4"-->
-<!--        app:layout_constraintHorizontal_bias="0.432"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_marginTop="6dp"
+            android:padding="10dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_ham">
 
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="?attr/actionBarSize"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:navigationIcon="@drawable/ic_ham">
+                android:layout_height="match_parent">
 
-            </androidx.appcompat.widget.Toolbar>
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="69dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_toLeftOf="@+id/btn_logout"
+                    android:text="UserName"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/editText"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:background="@drawable/search_bg"
-                android:hint="Search for Services"
-                android:inputType="text"
-                android:maxLines="@integer/material_motion_duration_long_1"
-                android:padding="14dp"
-                android:textColorHint="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/dashboardView"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:layout_centerHorizontal="true"
-                app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText"
-                app:layout_constraintVertical_bias="0.762"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/dashboard" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout3"
-                android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:padding="12dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                tools:layout_editor_absoluteX="0dp">
+                <Button
+                    android:id="@+id/btn_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/button_bg"
+                    android:text="Logout"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
 
 
-                <ImageView
-                    android:id="@+id/img_med_remainder"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/pill"
-                    app:layout_constraintBottom_toTopOf="@+id/imageView5"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.105"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+        </androidx.appcompat.widget.Toolbar>
 
-                <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginEnd="48dp"
-                    android:src="@drawable/goverment"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView7"
-                    app:layout_constraintHorizontal_bias="0.963"
-                    app:layout_constraintStart_toEndOf="@+id/img_med_remainder"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
 
-                <ImageView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-                    android:id="@+id/imageView7"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/tech"
-                    app:layout_constraintBottom_toTopOf="@+id/imageView10"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.9"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_medicine_remainder"
+                android:layout_marginLeft="26dp"
+                android:layout_width="170dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="18dp">
 
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="12dp"
-                    android:src="@drawable/yoga"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.076"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.893" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:padding="10dp">
 
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="12dp"
-                    android:layout_marginStart="52dp"
-                    android:src="@drawable/location"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView10"
-                    app:layout_constraintHorizontal_bias="0.56"
-                    app:layout_constraintStart_toEndOf="@+id/imageView5"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView8"
-                    app:layout_constraintVertical_bias="0.764" />
+                    <ImageView
+                        android:id="@+id/img_pill"
+                        android:layout_width="140dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/pill" />
 
-                <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="12dp"
-                    android:src="@drawable/nearby_hosp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.923"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.893" />
+                    <TextView
+                        android:id="@+id/txt_medicine_remainder_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_pill"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Medicine Remainder"
+                        android:textColor="#ffff"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_medicine_remainder_text"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="3dp"
+                        android:text="about medicine remainder"
+                        android:textColor="#ffff" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-<!--    </ScrollView>-->
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_yoga_workout"
+                android:layout_width="170dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="30dp"
+                app:cardCornerRadius="18dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_yoga"
+                        android:layout_width="140dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/yoga" />
+
+                    <TextView
+                        android:id="@+id/txt_yoga_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_yoga"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Yoga And WorkOut"
+                        android:textColor="#ffff"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_yoga_text"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="3dp"
+                        android:text="about Yoga and Workout"
+                        android:textColor="#ffff" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_send_location"
+                android:layout_width="170dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="18dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_send_location"
+                        android:layout_width="140dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/location" />
+
+                    <TextView
+                        android:id="@+id/txt_send_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_send_location"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Send Your Location"
+                        android:textColor="#ffff"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_send_location"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="3dp"
+                        android:text="about Send Your Location"
+                        android:textColor="#ffff" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_nearby_hospital"
+                android:layout_width="170dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="18dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_nearby_hospital"
+                        android:layout_width="140dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/nearby_hosp" />
+
+                    <TextView
+                        android:id="@+id/txt_nearby_hospital"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_nearby_hospital"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Nearby Hospital"
+                        android:textColor="#ffff"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_nearby_hospital"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="3dp"
+                        android:text="about Nearby Hospital"
+                        android:textColor="#ffff" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_learn_tech"
+                android:layout_width="170dp"
+                android:layout_marginLeft="26dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="18dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_learn_tech"
+                        android:layout_width="140dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/tech" />
+
+                    <TextView
+                        android:id="@+id/txt_learn_tech"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_learn_tech"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Learn Technology"
+                        android:textColor="#ffff"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_learn_tech"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="3dp"
+                        android:text="about Learn Technology"
+                        android:textColor="#ffff" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_government_facl"
+                android:layout_width="170dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="18dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_government_facl"
+                        android:layout_width="140dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/goverment" />
+
+                    <TextView
+                        android:id="@+id/txt_government_facl"
+                        android:layout_below="@+id/img_government_facl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Government Facilities"
+                        android:textColor="#ffff"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_government_facl"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="3dp"
+                        android:text="about Government Facilities"
+                        android:textColor="#ffff" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
 
 
 

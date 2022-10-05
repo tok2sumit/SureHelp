@@ -6,43 +6,17 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
-            android:title="Home" />
+            android:title="DashBoard" />
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_home"
+            android:title="Profile" />
         <item
             android:id="@+id/logout"
             android:icon="@drawable/ic_home"
-            android:title="Home" />
+            android:title="Logout" />
 
     </group>
-        <item android:title="Profile">
-            <menu>
-                <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/one"
-                    android:icon="@drawable/ic_home"
-                    android:title="Home" />
-                <item
-                    android:id="@+id/two"
-                    android:icon="@drawable/ic_home"
-                    android:title="Home" />
-                </group>
-            </menu>
 
-        </item>
-
-
-    <item android:title="Communicate">
-        <menu>
-            <group android:checkableBehavior="single">
-            <item
-                android:id="@+id/three"
-                android:icon="@drawable/ic_home"
-                android:title="Home" />
-            <item
-                android:id="@+id/four"
-                android:icon="@drawable/ic_home"
-                android:title="Home" />
-            </group>
-        </menu>
-    </item>
 
 </menu>

@@ -22,6 +22,7 @@ public class signup_tab_activity1 extends AppCompatActivity {
     ImageView backBtn;
     Button next, login;
     TextView titleText, slideText;
+    ImageView backbutton;
 
 //    variables for getting the data.
     EditText fullname,email,username,password;
@@ -45,6 +46,15 @@ public class signup_tab_activity1 extends AppCompatActivity {
         email = findViewById(R.id.signup_email);
         username = findViewById(R.id.signup_username);
         password = findViewById(R.id.signup_password);
+
+        // Hook for back button
+        backbutton = findViewById(R.id.signup_back_button);
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Login_Activity.class));
+            }
+        });
 
 
 //        button = findViewById(R.id.signup_next_button);

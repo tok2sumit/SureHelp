@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +31,8 @@ import java.util.concurrent.TimeUnit;
 public class forgot_otp extends AppCompatActivity {
 
     Button btn_callNextScreenFromOTP;
+    ImageView img_forgort_cancel;
+
 
     //    pinview variable
     PinView pinfromUser;
@@ -43,11 +46,18 @@ public class forgot_otp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_otp);
+        setContentView(R.layout.activity_forgot_otp);
 
-
-
-
+        // Hook for cancel screen
+        img_forgort_cancel = findViewById(R.id.img_forgort_cancel);
+        img_forgort_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(forgot_otp.this,forgot_password_activity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
         pinfromUser = findViewById(R.id.pin_view);

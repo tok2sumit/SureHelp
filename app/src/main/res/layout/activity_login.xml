@@ -20,11 +20,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
-        android:layout_marginTop="45dp"
-        android:background="@drawable/top_round"
         android:id="@+id/relativelayoutlogin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/top_round"
         android:padding="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,11 +33,11 @@
         app:layout_constraintVertical_bias="0.154">
 
         <com.airbnb.lottie.LottieAnimationView
-            android:layout_marginBottom="15dp"
             android:id="@+id/animationView_login"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/login"
@@ -45,11 +45,11 @@
             tools:layout_editor_absoluteY="80dp" />
 
         <com.hbb20.CountryCodePicker
-            android:layout_centerInParent="true"
             android:id="@+id/country_code_picker"
             android:layout_width="329dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/animationView_login"
+            android:layout_centerInParent="true"
             android:background="@drawable/edit_text_bg"
             android:padding="7dp"
             app:ccp_autoDetectCountry="true"
@@ -58,11 +58,11 @@
             app:ccp_showNameCode="true" />
 
         <EditText
-            android:layout_centerInParent="true"
             android:id="@+id/login_phone_number"
             android:layout_width="329dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/country_code_picker"
+            android:layout_centerInParent="true"
             android:layout_marginTop="22dp"
             android:layout_marginBottom="22dp"
             android:background="@drawable/edit_text_bg"
@@ -77,11 +77,11 @@
             android:textColorHint="@color/black" />
 
         <EditText
-            android:layout_centerInParent="true"
             android:id="@+id/et_password"
             android:layout_width="329dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/login_phone_number"
+            android:layout_centerInParent="true"
             android:background="@drawable/edit_text_bg"
             android:hint="Password"
             android:inputType="textPassword"
@@ -102,6 +102,28 @@
             android:text="Login"
             android:textColor="@color/white"
             android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cb_rem_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_password"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="13dp" />
+
+        <TextView
+            android:layout_marginTop="18dp"
+            android:layout_below="@+id/et_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txt_forgot_password"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="171dp"
+            android:layout_toEndOf="@+id/cb_rem_me"
+            android:text="Remember Me !"
+            android:textColor="@color/black"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView

@@ -34,6 +34,7 @@ public class forgot_password_activity extends AppCompatActivity {
     private Button nextBtn;
     private Animation animation;
     ProgressBar progressBar;
+    ImageView forget_password_back_btn;
 
 
     @Override
@@ -62,6 +63,15 @@ public class forgot_password_activity extends AppCompatActivity {
 //        Call the otp screen and pass phoneno Number
 //        for verification
         progressBar.setVisibility(View.GONE);
+
+        forget_password_back_btn = findViewById(R.id.forget_password_back_btn);
+        forget_password_back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),Login_tab_activity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
