@@ -79,13 +79,13 @@ public class New_dashboard extends AppCompatActivity {
             }
         });
 
-        nearby_location.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent nearby_l = new Intent(getApplicationContext(),Map_Activity.class);
-                startActivity(nearby_l);
-            }
-        });
+//        nearby_location.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent nearby_l = new Intent(getApplicationContext(),Map_Activity.class);
+//                startActivity(nearby_l);
+//            }
+//        });
 
 
         featured_recycler = findViewById(R.id.featured_recycler);

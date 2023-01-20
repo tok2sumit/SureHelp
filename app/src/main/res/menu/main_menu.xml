@@ -11,10 +11,6 @@
             android:id="@+id/profile"
             android:icon="@drawable/ic_home"
             android:title="Profile" />
-        <item
-            android:id="@+id/logout"
-            android:icon="@drawable/ic_home"
-            android:title="Logout" />
 
     </group>
 

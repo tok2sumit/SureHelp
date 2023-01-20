@@ -13,11 +13,11 @@
         android:padding="30dp">
 
         <ImageView
-            android:id="@+id/img_forgort_cancel"
+            android:id="@+id/img_cancel_forgot_otp1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:src="@drawable/ic_close"
+            android:src="@drawable/ic_general_back_icon"
             app:tint="@color/black" />
 
         <TextView

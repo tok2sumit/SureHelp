@@ -49,7 +49,7 @@ public class forgot_otp extends AppCompatActivity {
         setContentView(R.layout.activity_forgot_otp);
 
         // Hook for cancel screen
-        img_forgort_cancel = findViewById(R.id.img_forgort_cancel);
+        img_forgort_cancel = findViewById(R.id.img_cancel_forgot_otp1);
         img_forgort_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

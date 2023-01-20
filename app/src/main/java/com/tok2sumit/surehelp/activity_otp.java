@@ -62,13 +62,13 @@ public class activity_otp extends AppCompatActivity {
         phoneno = getIntent().getStringExtra("phoneno");
 //        whattodo = getIntent().getStringExtra("whattodo");
 
-        btn_callNextScreenFromOTP = findViewById(R.id.btn_callNextScreenFromOTP);
-        btn_callNextScreenFromOTP.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                    storeNewUser();
-            }
-        });
+//        btn_callNextScreenFromOTP = findViewById(R.id.btn_callNextScreenFromOTP);
+//        btn_callNextScreenFromOTP.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                    storeNewUser();
+//            }
+//        });
 
         otpDescriptionText.setText("Enter One Time Password Sent on"+phoneno);
         sendVerificationCodeToUser(phoneno);

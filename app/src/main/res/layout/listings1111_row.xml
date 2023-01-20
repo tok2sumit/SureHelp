@@ -21,11 +21,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/card2_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/pill"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/event"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="96dp"
             android:padding="10dp"
             android:text="Message"
             android:textColor="#ffffff"
@@ -33,29 +42,28 @@
             android:textStyle="bold"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toStartOf="@+id/btn_cancel_alarm"
-            card_view:layout_constraintHorizontal_bias="0.2"
-            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.273"
+            card_view:layout_constraintStart_toEndOf="@+id/card2_image"
             card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintVertical_bias="0.428" />
+            card_view:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/btn_cancel_alarm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancel"
-            android:textStyle="bold"
-            android:textSize="14sp"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_corner_whilte"
             android:paddingLeft="4dp"
             android:paddingRight="4dp"
-            android:layout_margin="4dp"
-            android:textColor="@color/white"
-            android:background="@drawable/rounded_corner"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.945"
+            card_view:layout_constraintHorizontal_bias="0.908"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintVertical_bias="0.222" />
+            card_view:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/time_and_date"
@@ -68,10 +76,10 @@
             android:textStyle="bold|italic"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toStartOf="@+id/btn_cancel_alarm"
-            card_view:layout_constraintHorizontal_bias="0.324"
-            card_view:layout_constraintStart_toEndOf="@+id/event"
-            card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintVertical_bias="0.529" />
+            card_view:layout_constraintHorizontal_bias="0.151"
+            card_view:layout_constraintStart_toEndOf="@+id/card2_image"
+            card_view:layout_constraintTop_toBottomOf="@+id/event"
+            card_view:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

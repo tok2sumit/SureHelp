@@ -30,8 +30,9 @@ public class Login_tab_activity extends AppCompatActivity {
     CountryCodePicker countryCodePicker;
     EditText phoneno, password;
     RelativeLayout progressbar;
+    Button cancel_login_button;
 
-    // For Signi-In Remember me
+    // For SignIn-In Remember me
     CheckBox checkBox;
 
     @Override
@@ -61,13 +62,20 @@ public class Login_tab_activity extends AppCompatActivity {
             }
         });
 
-
-
         textView = findViewById(R.id.txt_forgot_password);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), forgot_password_activity.class);
+                startActivity(intent);
+            }
+        });
+
+        cancel_login_button = findViewById(R.id.cancel_login_button);
+        cancel_login_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login_tab_activity.this,Login_Activity.class);
                 startActivity(intent);
             }
         });
@@ -78,9 +86,7 @@ public class Login_tab_activity extends AppCompatActivity {
         phoneno = findViewById(R.id.login_phone_number);
         password =findViewById(R.id.et_password);
         progressbar = findViewById(R.id.login_progress_bar);
-
         progressbar.setVisibility(View.GONE);
-
 
     }
 
@@ -122,13 +128,14 @@ public class Login_tab_activity extends AppCompatActivity {
                         progressbar.setVisibility(View.GONE);
 //                    if the user exist with that phoneno
 //                    fetch all data of the user
-//                        String _fullname = snapshot.child(_completePhoneNumber).child("fullname").getValue(String.class);
-//                        String _email = snapshot.child(_completePhoneNumber).child("email").getValue(String.class);
-//                        String _phoneno = snapshot.child(_completePhoneNumber).child("phoneno").getValue(String.class);
-//                        String _dateofBirth = snapshot.child(_completePhoneNumber).child("date").getValue(String.class);
+                        String _fullname = snapshot.child(_completePhoneNumber).child("fullname").getValue(String.class);
+                        String _email = snapshot.child(_completePhoneNumber).child("email").getValue(String.class);
+                        String _phoneno = snapshot.child(_completePhoneNumber).child("phoneno").getValue(String.class);
+                        String _dateofBirth = snapshot.child(_completePhoneNumber).child("date").getValue(String.class);
 //
-//                        Toast.makeText(Login_tab_activity.this, _fullname+_email+_phoneno+_dateofBirth,Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(Login_tab_activity.this, _fullname+_email+_phoneno+_dateofBirth,Toast.LENGTH_SHORT).show();
                        Intent intent = new Intent(getApplicationContext(),DashboardActivity.class);
+                       intent.putExtra("fullname",_fullname);
                        startActivity(intent);
                     } else {
                         progressbar.setVisibility(View.GONE);

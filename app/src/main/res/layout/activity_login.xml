@@ -32,6 +32,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintVertical_bias="0.154">
 
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignBottom="@+id/animationView_login"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginEnd="359dp"-->
+<!--            android:layout_marginBottom="152dp"-->
+<!--            android:padding="5dp"-->
+<!--            android:src="@drawable/ic_general_back_icon"-->
+<!--            app:tint="@color/black" />-->
+
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/animationView_login"
             android:layout_width="wrap_content"
@@ -100,6 +113,19 @@
             android:background="@drawable/button_bg"
             android:onClick="letTheUserLoggedIn"
             android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/cancel_login_button"
+            android:layout_width="329dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_button"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_bg"
+            android:text="Cancel"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />

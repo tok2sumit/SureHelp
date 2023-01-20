@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "916266560132",
+    "firebase_url": "https://surehelp-581ef-default-rtdb.firebaseio.com",
     "project_id": "surehelp-581ef",
     "storage_bucket": "surehelp-581ef.appspot.com"
   },
@@ -14,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "916266560132-onnqrh12p8uuud492jj8o5i9f8aq1lat.apps.googleusercontent.com",
+          "client_id": "916266560132-plm1biltq5glmmrj0ldb3v3k3g2ejllj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.tok2sumit.surehelp",
-            "certificate_hash": "a9c345e0bf0625302da6247480eabfda5b8dcbb5"
+            "certificate_hash": "f561347663860ca9cc73a2234d6c4483754028c8"
           }
         },
         {
@@ -28,7 +29,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBtqXTWYPQ1LVZjq7Oc2r3YGlQSXeYnXeo"
+          "current_key": "AIzaSyAB69_Gt9b2bcGiUeuS-zNzBWCOHM7wMT8"
         }
       ],
       "services": {

@@ -19,8 +19,6 @@
         android:layout_gravity="start"
         app:menu="@menu/main_menu" />
 
-
-
 <ScrollView
     android:background="@drawable/top_round"
     android:layout_width="match_parent"
@@ -87,9 +85,9 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_medicine_remainder"
-                android:layout_marginLeft="26dp"
-                android:layout_width="170dp"
-                android:layout_height="280dp"
+                android:layout_marginLeft="16dp"
+                android:layout_width="180dp"
+                android:layout_height="250dp"
                 android:layout_marginTop="16dp"
                 app:cardCornerRadius="18dp">
 
@@ -135,9 +133,9 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_yoga_workout"
-                android:layout_width="170dp"
+                android:layout_width="180dp"
                 android:layout_marginLeft="20dp"
-                android:layout_height="280dp"
+                android:layout_height="250dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="30dp"
                 app:cardCornerRadius="18dp">
@@ -190,10 +188,10 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_send_location"
-                android:layout_width="170dp"
-                android:layout_marginLeft="26dp"
+                android:layout_width="180dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginRight="20dp"
-                android:layout_height="280dp"
+                android:layout_height="250dp"
                 android:layout_marginTop="16dp"
                 app:cardCornerRadius="18dp">
 
@@ -238,8 +236,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_nearby_hospital"
-                android:layout_width="170dp"
-                android:layout_height="280dp"
+                android:layout_width="180dp"
+                android:layout_height="250dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="20dp"
                 app:cardCornerRadius="18dp">
@@ -292,9 +290,9 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_learn_tech"
-                android:layout_width="170dp"
-                android:layout_marginLeft="26dp"
-                android:layout_height="280dp"
+                android:layout_width="180dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="250dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="20dp"
                 app:cardCornerRadius="18dp">
@@ -339,8 +337,8 @@
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_government_facl"
-                android:layout_width="170dp"
-                android:layout_height="280dp"
+                android:layout_width="180dp"
+                android:layout_height="250dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="20dp"
                 app:cardCornerRadius="18dp">

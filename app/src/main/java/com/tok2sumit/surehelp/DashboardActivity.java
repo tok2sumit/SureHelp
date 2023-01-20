@@ -61,8 +61,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     GoogleSignInClient gsc;
     TextView name;
     Button signOutBtn;
-
-
     CardView medicine_rem,yoga_workout,send_your_location,nearby_hospital,learn_tech,Government_fal;
 
     @Override
@@ -108,12 +106,11 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.nav_open,R.string.nav_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_home);
 
 //        for making navigation drawer item clikable
         navigationView.setNavigationItemSelectedListener(this);
-
-
-
         medicine_rem.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -133,16 +130,15 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         nearby_hospital.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent nearby_l = new Intent(getApplicationContext(),Map_Activity.class);
+            Intent nearby_l = new Intent(DashboardActivity.this,MapsActivity.class);
             startActivity(nearby_l);
         }
     });
 
 
-       // for sending location
-
-    enumber1 = "8104005081";
-    fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+        // for sending location
+        enumber1 = "8104005081";
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
         send_your_location.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -161,6 +157,12 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         }
     });
 
+        if (getIntent().getStringExtra("fullname")!=null){
+            name = findViewById(R.id.txt_name);
+            String fullname = getIntent().getStringExtra("fullname");
+            name.setText(fullname);
+        }
+
     }
     @Override
     public void onBackPressed(){
@@ -172,8 +174,18 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.nav_home:
+                break;
+            case R.id.profile:
+                Intent intent = new Intent(DashboardActivity.this,Profile.class);
+                startActivity(intent);
+                break;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
 
 
     private void getLocation() {
@@ -223,10 +235,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     private void SendMessage(String locationlink){
         //Initialize sms Manager
         SmsManager smsManager = SmsManager.getDefault();
-
         //Send text Message
         smsManager.sendTextMessage(enumber1,null,locationlink,null,null);
-
         //Displaying Toast
         Toast.makeText(getApplicationContext(),"Location sent Successfully via SMS",Toast.LENGTH_LONG).show();
 

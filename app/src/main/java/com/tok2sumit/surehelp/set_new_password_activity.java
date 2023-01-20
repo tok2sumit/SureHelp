@@ -26,6 +26,7 @@ private ImageView screenIcon;
     private Button nextBtn;
     private Animation animation;
     ProgressBar progressBar;
+    ImageView img_cancel_forgot_otp;
 
 
     @Override
@@ -41,6 +42,7 @@ private ImageView screenIcon;
         ConfirmPassword = findViewById(R.id.conferm_password);
         nextBtn = findViewById(R.id.set_new_password_btn);
         progressBar = findViewById(R.id.progressbar);
+        img_cancel_forgot_otp = findViewById(R.id.img_cancel_forgot_otp);
 
 
 //        Animation hook
@@ -52,6 +54,15 @@ private ImageView screenIcon;
         nextBtn.setAnimation(animation);
 
         progressBar.setVisibility(View.GONE);
+
+
+        img_cancel_forgot_otp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Login_tab_activity.class));
+                finish();
+            }
+        });
     }
 
 

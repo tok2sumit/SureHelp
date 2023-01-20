@@ -7,6 +7,18 @@
     android:background="@color/login_btn"
     tools:context=".Med_Remainder_Activity">
 
+    <ImageView
+        android:id="@+id/signup_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:padding="5dp"
+        android:src="@drawable/ic_back_white"
+        android:transitionName="transition_back_arrow_btn"
+        app:layout_constraintEnd_toStartOf="@+id/img_med_profile_pic"
+        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/img_med_profile_pic"
@@ -65,7 +77,7 @@
             android:layout_alignParentBottom="true"
             android:background="@drawable/button_bg"
             android:padding="16sp"
-            android:text="Create Event"
+            android:text="Add Medicine"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="16sp"
