@@ -21,7 +21,6 @@
             android:src="@drawable/ic_general_back_icon"
             android:transitionName="transition_back_arrow_btn" />
 
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
