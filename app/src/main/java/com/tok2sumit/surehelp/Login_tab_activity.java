@@ -2,7 +2,6 @@ package com.tok2sumit.surehelp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -14,7 +13,6 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -23,8 +21,6 @@ import com.google.firebase.database.ValueEventListener;
 import com.hbb20.CountryCodePicker;
 
 public class Login_tab_activity extends AppCompatActivity {
-
-
     //    variables
     TextView textView;
     CountryCodePicker countryCodePicker;
@@ -39,7 +35,6 @@ public class Login_tab_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
 
         // Code For Remember Me Sign-In
         checkBox = findViewById(R.id.cb_rem_me);
@@ -80,14 +75,12 @@ public class Login_tab_activity extends AppCompatActivity {
             }
         });
 
-
 //      hooks
         countryCodePicker = findViewById(R.id.country_code_picker);
         phoneno = findViewById(R.id.login_phone_number);
         password =findViewById(R.id.et_password);
         progressbar = findViewById(R.id.login_progress_bar);
         progressbar.setVisibility(View.GONE);
-
     }
 
 //       login the user in app
@@ -97,7 +90,6 @@ public class Login_tab_activity extends AppCompatActivity {
         if (!validatephoneno() || !validatePassword()) {
             return;
         }
-
         progressbar.setVisibility(View.VISIBLE);
 //        get data
         String _phoneNumber = phoneno.getText().toString().trim();
@@ -110,16 +102,12 @@ public class Login_tab_activity extends AppCompatActivity {
 
 //        Database
         Query chechUser = FirebaseDatabase.getInstance().getReference("Users").orderByChild("phoneno").equalTo(_completePhoneNumber);
-
         chechUser.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     phoneno.setError(null);
                     phoneno.setEnabled(true);
-
-//
-
                     String systemPassword = snapshot.child(_completePhoneNumber).child("password").getValue(String.class);
                     if (systemPassword.equals(_password)) {
                         password.setError(null);
@@ -153,7 +141,6 @@ public class Login_tab_activity extends AppCompatActivity {
                 Toast.makeText(Login_tab_activity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     private boolean validatephoneno() {
@@ -172,9 +159,7 @@ public class Login_tab_activity extends AppCompatActivity {
             phoneno.setEnabled(false);
             return true;
         }
-
     }
-
 
     private boolean validatePassword() {
         String val = password.getText().toString().trim();

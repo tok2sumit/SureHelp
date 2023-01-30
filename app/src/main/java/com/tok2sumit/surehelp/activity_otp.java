@@ -14,7 +14,10 @@ import android.widget.Toast;
 import com.chaos.view.PinView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseException;
+import com.google.firebase.appcheck.FirebaseAppCheck;
+import com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderFactory;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
@@ -62,16 +65,16 @@ public class activity_otp extends AppCompatActivity {
         phoneno = getIntent().getStringExtra("phoneno");
 //        whattodo = getIntent().getStringExtra("whattodo");
 
-//        btn_callNextScreenFromOTP = findViewById(R.id.btn_callNextScreenFromOTP);
-//        btn_callNextScreenFromOTP.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                    storeNewUser();
-//            }
-//        });
+        btn_callNextScreenFromOTP = findViewById(R.id.btn_callNextScreenFromOTP);
+        btn_callNextScreenFromOTP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    storeNewUser();
+            }
+        });
 
-        otpDescriptionText.setText("Enter One Time Password Sent on"+phoneno);
-        sendVerificationCodeToUser(phoneno);
+//        otpDescriptionText.setText("Enter One Time Password Sent on"+phoneno);
+//        sendVerificationCodeToUser(phoneno);
 
 
     }
@@ -93,7 +96,6 @@ public class activity_otp extends AppCompatActivity {
                 public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                     super.onCodeSent(s, forceResendingToken);
                     codeBySystem = s;
-
                 }
 
                 @Override
@@ -124,7 +126,7 @@ public class activity_otp extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-//                            Toast.makeText(activity_otp.this,"Verification Completed.!",Toast.LENGTH_SHORT);
+                            Toast.makeText(activity_otp.this,"Verification Completed.!",Toast.LENGTH_SHORT);
 
                                 storeNewUser();
                                 Intent intent = new Intent(getApplicationContext(),Login_tab_activity.class);
@@ -141,16 +143,16 @@ public class activity_otp extends AppCompatActivity {
     }
 
     private void storeNewUser() {
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference reference = database.getReference("Users");
-//        reference.setValue("hello all");
-        UserHelperClass addNewUser = new UserHelperClass(fullname,phoneno,email,username,password,date,gender);
-//        reference.setValue(addNewUser);
-        reference.child(phoneno).setValue(addNewUser);
-//        Here using .child(phoneno) to store data under Users(reference) and storing it having id as phoneno.
-        Intent intent = new Intent(getApplicationContext(),Login_Activity.class);
-        startActivity(intent);
-        finish();
-    }
 
+//        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//        DatabaseReference reference = database.getReference("Users");
+//        reference.setValue("hello all");
+//        UserHelperClass addNewUser = new UserHelperClass(fullname,phoneno,email,username,password,date,gender);
+////        reference.setValue(addNewUser);
+//        reference.child(phoneno).setValue(addNewUser);
+////        Here using .child(phoneno) to store data under Users(reference) and storing it having id as phoneno.
+//        Intent intent = new Intent(getApplicationContext(),Login_Activity.class);
+//        startActivity(intent);
+//        finish();
+    }
 }

@@ -2,25 +2,14 @@ package com.tok2sumit.surehelp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.AlarmClock;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TimePicker;
-import android.widget.Toast;
-
 import com.tok2sumit.surehelp.Adapter.EventAdapter;
 import com.tok2sumit.surehelp.Database.DatabaseClass;
 import com.tok2sumit.surehelp.Database.EntityClass;
-
-import java.util.Calendar;
 import java.util.List;
-import java.util.Locale;
 
 public class Med_Remainder_Activity extends AppCompatActivity implements View.OnClickListener {
     Button createEvent;
@@ -44,7 +33,6 @@ public class Med_Remainder_Activity extends AppCompatActivity implements View.On
     protected void onResume() {
         super.onResume();
         setAdapter();
-
     }
 
     private void setAdapter() {
@@ -63,8 +51,6 @@ public class Med_Remainder_Activity extends AppCompatActivity implements View.On
     private void goToCreateEventActivity() {
         Intent intent = new Intent(getApplicationContext(),CreateEvent.class);
         startActivity(intent);
-//        Intent intent = new Intent(getApplicationContext(), CreateEvent.class);
-//        startActivity(intent);
     }
 
 }

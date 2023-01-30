@@ -53,9 +53,9 @@ public class FeaturedAdapter2 extends RecyclerView.Adapter<FeaturedAdapter2.Feat
             super(itemView);
 
 //        Hooks
-            image = itemView.findViewById(R.id.card2_image);
-            title = itemView.findViewById(R.id.card2_title);
-            desc = itemView.findViewById(R.id.card2_desc);
+//            image = itemView.findViewById(R.id.card2_image);
+//            title = itemView.findViewById(R.id.card2_title);
+//            desc = itemView.findViewById(R.id.card2_desc);
 
         }
     }

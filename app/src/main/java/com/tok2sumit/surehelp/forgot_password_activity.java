@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,7 +25,6 @@ import com.hbb20.CountryCodePicker;
 public class forgot_password_activity extends AppCompatActivity {
 //    Variables
     Button forget_password_next_btn;
-
     private ImageView screenIcon;
     private TextView title,description;
     private EditText phoneno;
@@ -35,7 +33,6 @@ public class forgot_password_activity extends AppCompatActivity {
     private Animation animation;
     ProgressBar progressBar;
     ImageView forget_password_back_btn;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +69,6 @@ public class forgot_password_activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 
     public void verifyPhoneNumber(View view){
@@ -84,19 +80,16 @@ public class forgot_password_activity extends AppCompatActivity {
         if (_phoneNumber.charAt(0) == 0) {
             _phoneNumber = _phoneNumber.substring(1);
         }
-
         String _completePhoneNumber = "+" + countryCodePicker.getFullNumber() + _phoneNumber;
 
 //        Database
         Query chechUser = FirebaseDatabase.getInstance().getReference("Users").orderByChild("phoneno").equalTo(_completePhoneNumber);
-
         chechUser.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     phoneno.setError(null);
                     phoneno.setEnabled(true);
-
                     Intent intent = new Intent(getApplicationContext(),forgot_otp.class);
                     intent.putExtra("phoneno", _completePhoneNumber);
 //                    intent.putExtra("whattodo","updateData");

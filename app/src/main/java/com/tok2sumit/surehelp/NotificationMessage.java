@@ -15,6 +15,5 @@ public class NotificationMessage extends AppCompatActivity {
         textView = findViewById(R.id.tv_message);
         Bundle bundle = getIntent().getExtras();
         textView.setText(bundle.getString("message"));
-
     }
 }

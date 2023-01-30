@@ -2,7 +2,6 @@ package com.tok2sumit.surehelp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +10,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.chaos.view.PinView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -22,17 +20,12 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.tok2sumit.surehelp.HelperClasses.UserHelperClass;
-
 import java.util.concurrent.TimeUnit;
 
 public class forgot_otp extends AppCompatActivity {
 
     Button btn_callNextScreenFromOTP;
     ImageView img_forgort_cancel;
-
 
     //    pinview variable
     PinView pinfromUser;
@@ -58,7 +51,6 @@ public class forgot_otp extends AppCompatActivity {
                 finish();
             }
         });
-
 
         pinfromUser = findViewById(R.id.pin_view);
         otpDescriptionText = findViewById(R.id.otp_description_text);
@@ -86,8 +78,6 @@ public class forgot_otp extends AppCompatActivity {
 
         otpDescriptionText.setText("Enter One Time Password Sent on"+phoneno);
         sendVerificationCodeToUser(phoneno);
-
-
     }
 
     private void sendVerificationCodeToUser(String phoneno){
@@ -102,12 +92,10 @@ public class forgot_otp extends AppCompatActivity {
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks =
             new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-
                 @Override
                 public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                     super.onCodeSent(s, forceResendingToken);
                     codeBySystem = s;
-
                 }
 
                 @Override
@@ -155,5 +143,4 @@ public class forgot_otp extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
 }

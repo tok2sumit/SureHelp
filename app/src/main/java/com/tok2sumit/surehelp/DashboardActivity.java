@@ -9,8 +9,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -23,7 +21,6 @@ import android.telephony.SmsManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,17 +32,12 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
-import com.tok2sumit.surehelp.HelperClasses.HomeAdapter.FeaturedAdapter;
-import com.tok2sumit.surehelp.HelperClasses.HomeAdapter.FeaturedAdapter2;
-import com.tok2sumit.surehelp.HelperClasses.HomeAdapter.FeaturedAdapter3;
-import com.tok2sumit.surehelp.HelperClasses.HomeAdapter.FeaturedHelperClass;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+
 
 public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     // Variables
@@ -55,6 +47,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     FusedLocationProviderClient fusedLocationProviderClient;
     String enumber1;
     String locationlink;
+
 
     // Variables for Google Sign-In & Sign-Out
     GoogleSignInOptions gso;
@@ -127,14 +120,14 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         }
     });
 
+
         nearby_hospital.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent nearby_l = new Intent(DashboardActivity.this,MapsActivity.class);
+            Intent nearby_l = new Intent(DashboardActivity.this,Nearby_Hospital.class);
             startActivity(nearby_l);
         }
     });
-
 
         // for sending location
         enumber1 = "8104005081";
@@ -164,6 +157,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         }
 
     }
+
     @Override
     public void onBackPressed(){
         if (drawerLayout.isDrawerOpen(GravityCompat.START)){
@@ -185,7 +179,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
-
 
 
     private void getLocation() {
@@ -222,8 +215,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                         } else {
                             ActivityCompat.requestPermissions(DashboardActivity.this, new String[]{Manifest.permission.SEND_SMS}, 100);
                         }
-
-
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -239,7 +230,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         smsManager.sendTextMessage(enumber1,null,locationlink,null,null);
         //Displaying Toast
         Toast.makeText(getApplicationContext(),"Location sent Successfully via SMS",Toast.LENGTH_LONG).show();
-
     }
 
     @Override
@@ -255,7 +245,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         }
     }
 
-
     // Method for Google Account Sign-In
     void signOut(){
         gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -269,6 +258,5 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             }
         });
     }
-
 }
 
