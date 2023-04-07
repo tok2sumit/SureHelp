@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.govermentfacility">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GovermentFacility">
+        <activity android:name=".PMJAY"></activity>
+        <activity android:name=".concession" />
+        <activity
+            android:name=".annapurna"
+            android:label="annapurna" />
+        <activity
+            android:name=".PMVVY"
+            android:label="PMVVY" />
+        <activity
+            android:name=".RVY"
+            android:label="RVY" />
+        <activity
+            android:name=".Pension"
+            android:label="Pension" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
