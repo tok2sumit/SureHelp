@@ -341,6 +341,7 @@
                 android:layout_height="250dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="20dp"
+                android:onClick="Government_Facility_method"
                 app:cardCornerRadius="18dp">
 
                 <RelativeLayout

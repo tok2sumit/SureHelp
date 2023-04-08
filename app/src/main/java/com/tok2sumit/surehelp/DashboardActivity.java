@@ -156,6 +156,16 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             name.setText(fullname);
         }
 
+
+        // Calling Goverment Facility feature via OnClick
+        Government_fal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, govfacility_main.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -244,6 +254,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             Toast.makeText(getApplicationContext(),"Permission Denied!", Toast.LENGTH_LONG).show();
         }
     }
+
 
     // Method for Google Account Sign-In
     void signOut(){

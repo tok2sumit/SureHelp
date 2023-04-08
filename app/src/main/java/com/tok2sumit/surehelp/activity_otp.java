@@ -143,16 +143,21 @@ public class activity_otp extends AppCompatActivity {
     }
 
     private void storeNewUser() {
+        FirebaseApp.initializeApp(this);
+        FirebaseAppCheck firebaseAppCheck = FirebaseAppCheck.getInstance();
+        firebaseAppCheck.installAppCheckProviderFactory(
+                PlayIntegrityAppCheckProviderFactory.getInstance());
 
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference reference = database.getReference("Users");
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference("Users");
 //        reference.setValue("hello all");
-//        UserHelperClass addNewUser = new UserHelperClass(fullname,phoneno,email,username,password,date,gender);
-////        reference.setValue(addNewUser);
-//        reference.child(phoneno).setValue(addNewUser);
-////        Here using .child(phoneno) to store data under Users(reference) and storing it having id as phoneno.
-//        Intent intent = new Intent(getApplicationContext(),Login_Activity.class);
-//        startActivity(intent);
-//        finish();
+        UserHelperClass addNewUser = new UserHelperClass(fullname,phoneno,email,username,password,date,gender);
+        reference.setValue(addNewUser);
+        reference.child(phoneno).setValue(addNewUser);
+//        Here using .child(phoneno) to store data under Users(reference) and storing it having id as phoneno.
+        Intent intent = new Intent(getApplicationContext(),Login_Activity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -50,9 +50,6 @@
             android:name=".Login_tab_activity"
             android:exported="false" />
         <activity
-            android:name=".Government_facility"
-            android:exported="false" />
-        <activity
             android:name=".New_dashboard"
             android:exported="false" />
         <activity
@@ -111,6 +108,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+<!--        Goverment Facility-->
+
+        <activity android:name=".PMJAY"/>
+        <activity android:name=".concession" />
+        <activity
+            android:name=".annapurna"
+            android:label="annapurna" />
+        <activity
+            android:name=".PMVVY"
+            android:label="PMVVY" />
+        <activity
+            android:name=".RVY"
+            android:label="RVY" />
+        <activity
+            android:name=".Pension"
+            android:label="Pension" />
+
+        <activity
+            android:name=".govfacility_main"
+            android:label="GovFacility_main" />
 
         <receiver
             android:name=".BootUpReceiver"
