@@ -166,6 +166,15 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             }
         });
 
+        // Calling Learn Technology feature via OnClick
+        learn_tech.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, Learn_Technology.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

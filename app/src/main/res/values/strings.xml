@@ -190,4 +190,83 @@ Ayushman Bharat PM-JAY is the largest health assurance scheme in the world which
     <string name="title_activity_nearby_location">Nearby_Location</string>
     <string name="google_maps_api">AIzaSyAB69_Gt9b2bcGiUeuS-zNzBWCOHM7wMT8</string>
     <string name="title_activity_map">Map_Activity</string>
+
+
+    <!--    Learn Technology String's value's -->
+    <string name="whatsappText">
+        <p>Whilst there\'s nothing wrong with using text messages and phone calls to keep in touch, many people now use WhatsApp to send messages and make calls. It\'s an easy way to stay connected with loved ones and to send and receive photos and videos.
+    </p>\n \n
+        <p><b> How do I use WhatsApp?</b>\n
+                1. Open WhatsApp on your phone.\n
+                2. Click the chats tab.\n
+                3. Tap the green circle with a messaging icon on the bottom right of your screen.\n
+                4. Choose a contact from your list or click the magnifying glass icon and type the name of the person you want to message.\n
+                5. Start chatting! The messages you send appear with a green background and once the person you’re chatting with has seen a message, two blue ticks will appear next to it.\n
+                6. The messages you receive will have a grey background on the left-hand side of your screen.\n
+            For better understanding, click <a href="https://youtu.be/Ryiv5t6CgFM">here</a> to watch this video.
+
+            \n \n \n \n \n \n
+        </p>
+    </string>
+    <string name="gpayText">
+        <p> Using online banking means you can keep control of your finances from home or whilst you\'re out and about, using your bank\'s website or smartphone app. Find out how to access online banking and keep your money secure. \n \n</p>
+        <b>Set up Google Pay \n</b> You can use Google Pay to send or request money from family and friends using a mobile phone and pay your utility bills and recharge your prepaid phone. \n
+        <p>To pay one of your contacts, no matter where in India they are: \n </p>
+        1. Open Google Pay. \n
+        2. From the bottom of the screen, tap "New Payment" \n
+        3. Search for the person or contact you want to send money. \n
+        4. Once you select the person/contact are provided, in next screen, enter the amount. \n
+        5. Tap Pay. \n
+        6. Enter the amount and description and select the form of payment. \n
+        7. Tap Proceed to pay. \n
+        8. Enter your UPI PIN. \n
+        When the money has been sent, you\’ll get a notification. You\'ll also receive an SMS from your bank with the debited amount.
+        For better understanding, click <a href="https://www.youtube.com/watch?v=-E8IQ8jekkQ">here</a> to watch this video. \n \n \n \n \n \n \n \n
+
+    </string>
+    <string name="foodText">
+        <p>There are so many good food delivery apps in India like swiggy, Uber Eats, Zomato and many more. Ordering food on Zomato is a very easy and fun process. You just have to decide what you want to eat and then follow the simple steps to get the delicious food at your doorstep! \n \n</p>
+    <b>How can you Order Food on Zomato \n</b>
+        1. Open the Zomato app \n
+        2. Search for your food in the Search Bar \n
+        3. Select the restaurant from which you would like to order your food \n
+        4. Select your food item and hit add \n
+        5. Click on \'next\' \n
+        6. Add address at next step \n
+        7. Fill in your address \n
+        8. Click on \'save address\' \n
+        9. Click on \'Place order\' \n
+        For better understanding, click <a href="https://www.youtube.com/watch?v=GiR1b_Cpxf4">here</a> to watch this video.\n \n \n \n \n \n
+    </string>
+    <string name="locText">
+<p>To get easy, turn-by-turn navigation to places, use the Google Maps app. Maps shows you directions and uses real-time traffic information to find the best route to your destination. With voice navigation, you can hear traffic alerts, where to turn, which lane to use, and if there\'s a better route. \n \n</p>
+        <b>Start or stop navigation \n</b>
+        1. On your Android phone or tablet, open the Google Maps app \n
+        2. Search for a place or tap it on the map. \n
+        3. At the bottom left, tap Directions. \n
+        4. Choose your mode of transportation. \n
+        5. If other routes are available, they\'ll show in gray on the map. To follow an alternate route, tap the gray line. \n
+        6. To start navigation, tap Start \n
+        7. To stop or cancel navigation, go to the bottom left and tap Close \n \n \n \n \n \n \n \n
+    </string>
+    <string name="uberText">
+        <p> Whether you\’re running an errand across town or exploring a city far from home, getting there should be easy. Learn how to ride with the Uber app. \n \n</p>
+        <b>How to use the Uber app \n</b>
+        1. Create an account - All you need is an email address and phone number. You can request a ride from your browser or from the Uber app. To download the app, go to the App Store or Google Play. \n
+        2.Enter your destination - Open the app and enter where you\’re going in the Where to? box. Tap to confirm your pickup location and tap Confirm again to be matched to a driver nearby. \n
+        3. Meet your driver - You can track their arrival on the map. When they’re a few minutes away, wait for them at your pickup location. \n
+        4. Check your ride - Every time you take a trip with Uber, please make sure you’re getting into the right car with the right driver by matching the license plate, car make and model, and driver photo with what’s provided in your app. \n
+        5. Sit back and relax - When you arrive, payment is easy. Depending on your region, you have options. Use cash or a payment method like a credit card or Uber Cash balance. \n \n \n \n \n \n \n
+    </string>
+    <string name="ytText">
+        <p>YouTube is a free video-viewing and sharing website. It’s simple to search for videos to watch and easy to upload videos to share with others. \n \n</p>
+        <b>How to use Youtube \n</b>
+        1. Go to the YouTube website. (You don’t need to create an account to watch most videos).\n
+        2. At the left-hand side of the page, click TV Shows.
+        3. As you start to scroll down all the way down to the bottom of the page you’ll see a range of TV show groups, including ‘Documentary TV shows’, ‘Comedy TV Shows’ and more. Let’s look for a cookery TV programme. Click on Food and Cooking TV shows. \n
+        4. This brings you to a screen showing a selection of programmes. \n
+        5. If you see a TV show you’d like to watch, simply click on the image of that show. You may then be taken to different episodes of the series. Choose the episode you want to watch and click on the image.  \n
+        6. To get a bigger picture you can click on ‘expand’ which allows the video to expand to take up the width of your screen but leaves your browser window etc visible. \n
+        7. You can also change the quality of the video \n \n \n \n \n \n \n \n \n
+    </string>
 </resources>

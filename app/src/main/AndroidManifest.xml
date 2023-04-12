@@ -28,11 +28,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SureHelp">
         <activity
+            android:name=".Learn_Technology"
+            android:exported="false" />
+        <activity
             android:name=".Nearby_Hospital"
             android:exported="false" />
         <activity
             android:name=".Profile"
             android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAB69_Gt9b2bcGiUeuS-zNzBWCOHM7wMT8" />
@@ -107,12 +111,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-
-<!--        Goverment Facility-->
-
-        <activity android:name=".PMJAY"/>
+        </activity> <!-- Goverment Facility -->
+        <activity android:name=".PMJAY" />
         <activity android:name=".concession" />
         <activity
             android:name=".annapurna"
@@ -126,10 +126,27 @@
         <activity
             android:name=".Pension"
             android:label="Pension" />
-
         <activity
             android:name=".govfacility_main"
-            android:label="GovFacility_main" />
+            android:label="GovFacility_main" /> <!-- Learn Technology activities -->
+        <activity
+            android:name=".food"
+            android:exported="false" />
+        <activity
+            android:name=".yt"
+            android:exported="false" />
+        <activity
+            android:name=".loc"
+            android:exported="false" />
+        <activity
+            android:name=".uber"
+            android:exported="false" />
+        <activity
+            android:name=".gpay"
+            android:exported="false" />
+        <activity
+            android:name=".whatsapp"
+            android:exported="false" />
 
         <receiver
             android:name=".BootUpReceiver"
