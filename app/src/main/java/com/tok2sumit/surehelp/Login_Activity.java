@@ -51,6 +51,7 @@ public class Login_Activity extends AppCompatActivity {
         String checkbox = preferences.getString("remember","");
         if (checkbox.equals("true")){
             Intent intent = new Intent(Login_Activity.this,DashboardActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // To clean up all activities
             startActivity(intent);
         }else if (checkbox.equals("false")){
             Toast.makeText(Login_Activity.this,"Please Sign-In",Toast.LENGTH_SHORT);
@@ -124,6 +125,7 @@ public class Login_Activity extends AppCompatActivity {
                 Uri personPhoto = acct.getPhotoUrl();
             }
             Intent intent = new Intent(Login_Activity.this,DashboardActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // To clean up all activities
             startActivity(intent);
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
@@ -135,6 +137,7 @@ public class Login_Activity extends AppCompatActivity {
     void navigateToSecondActivity(){
         finish();
         Intent intent = new Intent(Login_Activity.this,DashboardActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // To clean up all activities
         startActivity(intent);
     }
 

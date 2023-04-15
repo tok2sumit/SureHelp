@@ -66,16 +66,20 @@ public class activity_otp extends AppCompatActivity {
 //        whattodo = getIntent().getStringExtra("whattodo");
 
         btn_callNextScreenFromOTP = findViewById(R.id.btn_callNextScreenFromOTP);
-        btn_callNextScreenFromOTP.setOnClickListener(new View.OnClickListener() {
+        otpDescriptionText.setText("Enter One Time Password Sent on"+phoneno);
+
+        Toast.makeText(activity_otp.this, phoneno, Toast.LENGTH_SHORT).show();
+
+        if (phoneno.equals("+918104005081")){ // this is because "+918104005081" is been blocked by Firebase.
+            btn_callNextScreenFromOTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                     storeNewUser();
             }
         });
-
-//        otpDescriptionText.setText("Enter One Time Password Sent on"+phoneno);
-//        sendVerificationCodeToUser(phoneno);
-
+        }else {
+            sendVerificationCodeToUser(phoneno);
+        }
 
     }
 
@@ -153,7 +157,6 @@ public class activity_otp extends AppCompatActivity {
         DatabaseReference reference = database.getReference("Users");
 //        reference.setValue("hello all");
         UserHelperClass addNewUser = new UserHelperClass(fullname,phoneno,email,username,password,date,gender);
-        reference.setValue(addNewUser);
         reference.child(phoneno).setValue(addNewUser);
 //        Here using .child(phoneno) to store data under Users(reference) and storing it having id as phoneno.
         Intent intent = new Intent(getApplicationContext(),Login_Activity.class);

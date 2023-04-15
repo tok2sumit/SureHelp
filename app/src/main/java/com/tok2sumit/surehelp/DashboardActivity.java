@@ -56,6 +56,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     Button signOutBtn;
     CardView medicine_rem,yoga_workout,send_your_location,nearby_hospital,learn_tech,Government_fal;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +81,14 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this,gso);
 
+        if (getIntent().getStringExtra("fullname")!=null){
+            name = findViewById(R.id.txt_name);
+            String fullname = getIntent().getStringExtra("fullname");
+            name.setText(fullname);
+        }
+
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+
         if(acct!=null){
             String personName = acct.getDisplayName();
             name.setText(personName);
@@ -104,6 +114,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
 //        for making navigation drawer item clikable
         navigationView.setNavigationItemSelectedListener(this);
+
         medicine_rem.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -150,11 +161,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         }
     });
 
-        if (getIntent().getStringExtra("fullname")!=null){
-            name = findViewById(R.id.txt_name);
-            String fullname = getIntent().getStringExtra("fullname");
-            name.setText(fullname);
-        }
+
 
 
         // Calling Goverment Facility feature via OnClick
@@ -177,6 +184,11 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
     }
 
+
+
+
+
+
     @Override
     public void onBackPressed(){
         if (drawerLayout.isDrawerOpen(GravityCompat.START)){
@@ -191,9 +203,20 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             case R.id.nav_home:
                 break;
             case R.id.profile:
-                Intent intent = new Intent(DashboardActivity.this,Profile.class);
-                startActivity(intent);
-                break;
+
+                    String full_name = getIntent().getStringExtra("fullname");
+                    String user_name = getIntent().getStringExtra("username");
+                    String email_id = getIntent().getStringExtra("email");
+
+                Toast.makeText(DashboardActivity.this, full_name+" "+user_name+" "+email_id, Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(DashboardActivity.this, Profile.class);
+                    intent.putExtra("fullname", full_name);
+                    intent.putExtra("username", user_name);
+                    intent.putExtra("email", email_id);
+
+                    startActivity(intent);
+                    break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
@@ -274,7 +297,12 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("remember","false");
                 editor.apply();
+                Intent intent = new Intent(DashboardActivity.this,Login_Activity.class);
+                intent.putExtra("finish", true);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // To clean up all activities
+                startActivity(intent);
                 finish();
+
             }
         });
     }
