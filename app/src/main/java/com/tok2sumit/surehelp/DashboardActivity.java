@@ -10,9 +10,12 @@ import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -45,9 +48,10 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     NavigationView navigationView;
     Toolbar toolbar;
     FusedLocationProviderClient fusedLocationProviderClient;
-    String enumber1;
+    String enumber1,enumber2,enumber3;
     String locationlink;
 
+    private SQLiteDatabase db;
 
     // Variables for Google Sign-In & Sign-Out
     GoogleSignInOptions gso;
@@ -141,12 +145,42 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     });
 
         // for sending location
-        enumber1 = "8104005081";
+        db = openOrCreateDatabase("ContactDB", Context.MODE_PRIVATE, null);
+        db.execSQL(
+                "CREATE TABLE IF NOT EXISTS contact (contact1 VARCHAR, contact2 VARCHAR, contact3 VARCHAR);"
+        );
+
+
+
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
         send_your_location.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
+
+
+            String count = "SELECT count(*) FROM contact";
+            Cursor mcursor = db.rawQuery(count, null);
+            mcursor.moveToFirst();
+            int icount = mcursor.getInt(0);
+            if(icount==0){
+                Toast.makeText(DashboardActivity.this, "Enter Emergency contacts", Toast.LENGTH_SHORT).show();
+                Intent eintent= new Intent(DashboardActivity.this, Emergency_contact.class);
+                startActivity(eintent);
+            }
+            mcursor.close();
+
+            Cursor c = db.rawQuery("SELECT * FROM contact", null);
+
+            c.moveToNext();
+            enumber1= c.getString(0);
+            enumber2= c.getString(1);
+            enumber3= c.getString(2);
+
+
+            c.close();
+
             //check permission
             if (ActivityCompat.checkSelfPermission(DashboardActivity.this,
                     Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
@@ -270,6 +304,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         SmsManager smsManager = SmsManager.getDefault();
         //Send text Message
         smsManager.sendTextMessage(enumber1,null,locationlink,null,null);
+        smsManager.sendTextMessage(enumber2,null,locationlink,null,null);
+        smsManager.sendTextMessage(enumber3,null,locationlink,null,null);
         //Displaying Toast
         Toast.makeText(getApplicationContext(),"Location sent Successfully via SMS",Toast.LENGTH_LONG).show();
     }
