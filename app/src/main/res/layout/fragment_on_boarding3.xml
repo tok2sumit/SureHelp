@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
-        android:text="Technoloty"
+        android:text="Technology"
         android:textColor="@color/white"
         android:textSize="56sp"
         android:textStyle="bold"

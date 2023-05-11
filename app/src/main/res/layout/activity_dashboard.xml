@@ -112,7 +112,7 @@
                         android:layout_below="@+id/img_pill"
                         android:layout_marginLeft="1dp"
                         android:layout_marginTop="10dp"
-                        android:text="Medicine Remainder"
+                        android:text="Medicine Reminder"
                         android:textColor="#ffff"
                         android:textSize="28sp"
                         android:textStyle="bold" />
@@ -123,7 +123,7 @@
                         android:layout_below="@+id/txt_medicine_remainder_text"
                         android:layout_marginLeft="1dp"
                         android:layout_marginTop="3dp"
-                        android:text="about medicine remainder"
+                        android:text="about medicine reminder"
                         android:textColor="#ffff" />
 
 
@@ -227,7 +227,7 @@
                         android:layout_below="@+id/txt_send_location"
                         android:layout_marginLeft="1dp"
                         android:layout_marginTop="3dp"
-                        android:text="about Send Your Location"
+                        android:text="Send Location to emergency contacts"
                         android:textColor="#ffff" />
 
 
