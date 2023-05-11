@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@color/login_btn"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent"
-        android:background="@drawable/bg"
+        android:background="@drawable/top_round"
         android:weightSum="11">
 
         <RelativeLayout
@@ -25,7 +25,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:text="Learn Technology"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="34dp"
                 android:textStyle="bold" />
         </RelativeLayout>

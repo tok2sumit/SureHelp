@@ -95,19 +95,22 @@
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/drawable/progress_bar_background.xml" value="0.1015" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/drawable/rounded_corner.xml" value="0.112" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/drawable/rounded_corner_whilte.xml" value="0.184" />
+        <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/drawable/search_bg.xml" value="0.1515" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/drawable/top_round.xml" value="0.112" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_annapurna.xml" value="0.12777777777777777" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_create_event.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_dashboard.xml" value="0.22" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_delete_data.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_emergency_contact.xml" value="0.1" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_food.xml" value="0.1" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_forgot_otp.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_forgot_password.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_government_facility.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_govfacility.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_gpay.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_home.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_homescreen.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_learn_technology.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_learn_technology.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_loc.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_login2.xml" value="0.17552083333333332" />
@@ -123,6 +126,7 @@
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_p_m_j_a_y.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_pill_remainder_home.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_profile.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_r_v_y.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_send_your_location.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_set_new_password.xml" value="0.22" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_splash.xml" value="0.17552083333333332" />
@@ -132,6 +136,7 @@
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_web_view_map_screen.xml" value="0.14537037037037037" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_yoga_workout.xml" value="0.22" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_yoga_workout_user.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/activity_yt.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/card_design.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/card_design2.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Sumit Singh/AndroidStudioProjects/SureHelp/app/src/main/res/layout/card_design3.xml" value="0.17552083333333332" />
